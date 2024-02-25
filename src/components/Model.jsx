@@ -24,10 +24,10 @@ const Model = () => {
         mod.current.position.z = -0.5
         tl.current
             .to(G1.current.rotation, {y: -0.8}, 0)
-            .to(G1.current.position, {y: 0}, 1)
+            .to(G2.current.rotation, {y: -1.8}, 0)
             .to(G1.current.position, {y: 8}, 3)
-            .to(G2.current.position, {y: 9}, 4)
-            .to(G2.current.rotation, {y: -0.8}, 5)
+            .to(G2.current.position, {y: 9}, 3)
+            .to(G2.current.rotation, {y: 0}, 4)
             .to(G2.current.position, {y: 17}, 7)
             .to(G3.current.position, {y: 19.5}, 7)
             .to(G3.current.rotation, {y: -0.8}, 8)

@@ -2,22 +2,17 @@ import {Environment, OrbitControls, Scroll, ScrollControls} from "@react-three/d
 
 import './App.css'
 import Model from "./components/Model.jsx";
-import Model2 from "./components/Model2.jsx";
 
 function App() {
 
     return (
         <>
-            {/*<ambientLight intensity={0.1}/>*/}
             <color attach="background" args={["#e6e7ff"]}/>
-            {/*<ambientLight intensity={1.2}/>*/}
-            {/*<spotLight position={[0, 5, 0]} angle={1.3} penumbra={1} castShadow intensity={2} shadow-bias={-0.0001}/>*/}
             <Environment preset='warehouse'/>
 
             <ScrollControls pages={5} damping={0.2}>
 
                 <Model/>
-                {/*<Model2/>*/}
 
                 <Scroll>
 
@@ -28,7 +23,7 @@ function App() {
 
                     <div style={{position: 'absolute', top: `132vh`}}>
                         <div>
-                            <h1>Be a Man of the Future.</h1>
+                            <h1>ELITE</h1>
                         </div>
                         <div className='row'>
                             <p style={{maxWidth: '400px'}}>Featuring a sleek, metallic design inspired by advanced
@@ -44,7 +39,7 @@ function App() {
 
                     <div className='row' style={{top: `264vh`}}>
                         <div>
-                            <h1>Be a Man of the Future.</h1>
+                            <h1>MIDDLE</h1>
                         </div>
                         <div className='row'>
                             <p style={{maxWidth: '400px'}}>Featuring a sleek, metallic design inspired
@@ -60,7 +55,7 @@ function App() {
 
                     <div className='row' style={{top: `396vh`}}>
                         <div>
-                            <h1>HELLO3</h1>
+                            <h1>MINI</h1>
                         </div>
                         <div className='row'>
                             <p style={{maxWidth: '400px'}}>Featuring a sleek, metallic design inspired
