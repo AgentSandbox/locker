@@ -17,24 +17,24 @@ const Model = () => {
         tl.current.seek(scroll.offset * tl.current.duration())
     })
 
-     useLayoutEffect(()=> {
+    useLayoutEffect(()=> {
         tl.current = gsap.timeline({defaults: {duration: 2, ease: 'power1.inOut'}})
-        mod.current.rotation.y = 5
-        mod.current.position.y = -0.3
-        mod.current.position.z = -0.5
+
         tl.current
-            .to(G1.current.rotation, {y: -0.8}, 0)
+            .to(G1.current.rotation, {y: -2}, 0)
             .to(G1.current.position, {y: 0}, 1)
             .to(G1.current.position, {y: 8}, 3)
-            .to(G2.current.position, {y: 9}, 4)
-            .to(G2.current.rotation, {y: -0.8}, 5)
+            .to(G2.current.position, {y: 10}, 4)
+            .to(G2.current.rotation, {y: -3}, 5)
+            // .to(G2.current.position, {y: 12}, 6)
             .to(G2.current.position, {y: 17}, 7)
-            .to(G3.current.position, {y: 19.5}, 7)
-            .to(G3.current.rotation, {y: -0.8}, 8)
+            .to(G3.current.position, {y: 21}, 7)
+            .to(G3.current.rotation, {y: -3}, 8)
     },[])
 
     return (
         <>
+
             <group dispose={null} ref={mod}>
 
                 <group ref={G1}>
@@ -43,13 +43,11 @@ const Model = () => {
                 </group>
 
                 <group ref={G2}>
-                    <mesh geometry={nodes.G21.geometry} material={materials.G21} />
-                    <mesh geometry={nodes.G22.geometry} material={materials.G22} />
+                    <mesh geometry={nodes.G2.geometry} material={materials.G2} />
                 </group>
 
                 <group ref={G3}>
-                    <mesh geometry={nodes.G31.geometry} material={materials.G31} />
-                    <mesh geometry={nodes.G32.geometry} material={materials.G32} />
+                    <mesh geometry={nodes.G3.geometry} material={materials.G3} />
                 </group>
 
             </group>
